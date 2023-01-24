@@ -1,0 +1,21 @@
+.container {
+  max-height: 40vh;
+  min-height: 10rem;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+
+.landingImage {
+  height: auto;
+  max-width: 100%;
+}
+
+.landingText {
+  position: absolute;
+  z-index: 1;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

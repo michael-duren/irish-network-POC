@@ -1,9 +1,9 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { Poppins } from '@next/font/google';
 import classNames from 'classnames';
 
 import Button from '../ui/button';
-
 import styles from './main-header.module.css';
 
 const unbound = Poppins({
@@ -15,7 +15,14 @@ export default function MainHeader() {
   return (
     <header className={classNames(styles.header, unbound.className)}>
       <div className={styles.logo}>
-        <Link href="/">Logo</Link>
+        <Link href="/">
+          <Image
+            src="/in-logo.svg"
+            alt="Irish Network Logo"
+            width="150"
+            height="150"
+          />
+        </Link>
       </div>
       <nav className={styles.navigation}>
         <ul>
