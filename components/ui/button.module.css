@@ -1,14 +1,37 @@
-.primary {
-	color: white;
-  background-color: var(--color-primary-400);z
+.button {
+  padding: 1rem 2rem;
+  cursor: pointer;
+  min-width: 10rem;
+  border-width: 1px;
+  filter: drop-shadow(1px 10px 5px var(--color-primary-100));
 }
 
+/* Primary */
+.primary:hover,
+.primary:active {
+  background-color: var(--color-primary-400);
+}
+
+.primary {
+  background-color: var(--color-primary-700);
+}
+.primary a {
+  color: white;
+}
+
+/* Secondary */
 .secondary {
-	color: white;
+  color: white;
   background-color: var(--color-secondary-400);
 }
+.secondary a {
+  color: white;
+}
 
+/* Dark */
 .dark {
-	color: white;
-	background-color: black;
+  background-color: black;
+}
+.dark a {
+  color: white;
 }
