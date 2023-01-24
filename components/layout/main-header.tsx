@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { Poppins } from '@next/font/google';
 import classNames from 'classnames';
 
@@ -12,6 +13,17 @@ const unbound = Poppins({
 });
 
 export default function MainHeader() {
+  const router = useRouter();
+  const currentRoute = router.pathname;
+
+  const isActiveClass = (path: string, route: string) => {
+    const isActive = route === path ? styles.active : styles.inActive;
+
+    const navClassName = classNames(styles.link, isActive);
+    console.log(navClassName);
+    return navClassName;
+  };
+
   return (
     <header className={classNames(styles.header, unbound.className)}>
       <div className={styles.logo}>
@@ -27,22 +39,31 @@ export default function MainHeader() {
       <nav className={styles.navigation}>
         <ul>
           <li>
-            <Link className={styles.link} href="/">
+            <Link className={isActiveClass('/', currentRoute)} href="/">
               Home
             </Link>
           </li>
           <li>
-            <Link className={styles.link} href="/about">
+            <Link
+              className={isActiveClass('/about', currentRoute)}
+              href="/about"
+            >
               About
             </Link>
           </li>
           <li>
-            <Link className={styles.link} href="/members">
+            <Link
+              className={isActiveClass('/members', currentRoute)}
+              href="/members"
+            >
               Membership
             </Link>
           </li>
           <li>
-            <Link className={styles.link} href="/events">
+            <Link
+              className={isActiveClass('/events', currentRoute)}
+              href="/events"
+            >
               Events
             </Link>
           </li>
