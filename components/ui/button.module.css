@@ -31,7 +31,8 @@
 /* Dark */
 .dark {
   background-color: black;
+  color: white;
 }
-.dark a {
+.dark button {
   color: white;
 }

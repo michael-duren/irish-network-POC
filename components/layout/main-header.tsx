@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { signIn, signOut, useSession } from 'next-auth/react';
 import { Poppins } from '@next/font/google';
 import classNames from 'classnames';
 
@@ -13,6 +14,7 @@ const unbound = Poppins({
 });
 
 export default function MainHeader() {
+  const { data: session, status } = useSession();
   const router = useRouter();
   const currentRoute = router.pathname;
 
@@ -75,11 +77,38 @@ export default function MainHeader() {
               Contact
             </Link>
           </li>
-          <li>
-            <Button linkTo="/auth/login" buttonType="primary">
-              Log In
-            </Button>
-          </li>
+          {status === 'authenticated' && (
+            <li>
+              <Link
+                className={isActiveClass('/profile', currentRoute)}
+                href="/profile"
+              >
+                Profile
+              </Link>
+            </li>
+          )}
+          {(status === 'loading' || status === 'unauthenticated') && (
+            <li>
+              <Button
+                onClickHandler={signIn}
+                function="click"
+                buttonType="primary"
+              >
+                Log In
+              </Button>
+            </li>
+          )}
+          {status === 'authenticated' && (
+            <li>
+              <Button
+                onClickHandler={signOut}
+                function="click"
+                buttonType="dark"
+              >
+                Sign Out
+              </Button>
+            </li>
+          )}
         </ul>
       </nav>
     </header>

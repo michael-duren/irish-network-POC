@@ -6,10 +6,17 @@ import styles from './button.module.css';
 
 interface ButtonProps extends DefaultProps {
   buttonType: 'primary' | 'secondary' | 'dark';
-  linkTo: string;
+  function: 'link' | 'click';
+  linkTo?: string;
+  onClickHandler?: () => void;
 }
 
-export default function Button({ children, linkTo, buttonType }: ButtonProps) {
+export default function Button({
+  children,
+  linkTo,
+  buttonType,
+  onClickHandler,
+}: ButtonProps) {
   let buttonStyle;
 
   switch (buttonType) {
@@ -24,9 +31,19 @@ export default function Button({ children, linkTo, buttonType }: ButtonProps) {
       break;
   }
 
+  if (linkTo) {
+    return (
+      <div className={classNames(buttonStyle, styles.button)}>
+        <Link href={linkTo}>{children}</Link>
+      </div>
+    );
+  }
   return (
-    <button className={classNames(buttonStyle, styles.button)}>
-      <Link href={linkTo}>{children}</Link>
+    <button
+      onClick={onClickHandler}
+      className={classNames(buttonStyle, styles.button)}
+    >
+      {children}
     </button>
   );
 }
