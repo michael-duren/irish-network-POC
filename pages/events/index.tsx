@@ -1,7 +1,13 @@
+import Banner from '@/components/ui/banner';
+
 export default function Events() {
   return (
     <>
-      <h1>Events</h1>
+      <Banner
+        titleColor="white"
+        imagePath="/images/stools.jpg"
+        title="Upcoming Events"
+      />
     </>
   );
 }

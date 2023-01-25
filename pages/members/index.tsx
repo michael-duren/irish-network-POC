@@ -1,7 +1,13 @@
+import Banner from '@/components/ui/banner';
+
 export default function Members() {
   return (
     <>
-      <h1>Members Page</h1>
+      <Banner
+        titleColor="white"
+        imagePath="/images/stools.jpg"
+        title="Interested in becoming a member?"
+      />
     </>
   );
 }

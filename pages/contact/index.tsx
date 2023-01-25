@@ -1,7 +1,11 @@
+import Banner from '@/components/ui/banner';
+
 export default function Contact() {
   return (
-    <>
-      <h1>Contact</h1>
-    </>
+    <Banner
+      titleColor="white"
+      imagePath="/images/stools.jpg"
+      title="Get in Touch!"
+    />
   );
 }

@@ -68,6 +68,14 @@ export default function MainHeader() {
             </Link>
           </li>
           <li>
+            <Link
+              className={isActiveClass('/contact', currentRoute)}
+              href="/contact"
+            >
+              Contact
+            </Link>
+          </li>
+          <li>
             <Button linkTo="/auth/login" buttonType="primary">
               Log In
             </Button>

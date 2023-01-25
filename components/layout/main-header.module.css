@@ -31,7 +31,6 @@
 .link:hover {
   border-bottom: solid;
   border-color: black;
-  color: var(--color-secondary-400);
 }
 
 @media (min-width: 768px) {
