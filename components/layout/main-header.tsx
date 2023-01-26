@@ -5,6 +5,7 @@ import { signIn, signOut, useSession } from 'next-auth/react';
 import { Poppins } from '@next/font/google';
 import classNames from 'classnames';
 
+import NavItem from './nav-item';
 import Button from '../ui/button';
 import styles from './main-header.module.css';
 
@@ -16,15 +17,7 @@ const unbound = Poppins({
 export default function MainHeader() {
   const { data: session, status } = useSession();
   const router = useRouter();
-  const currentRoute = router.pathname;
-
-  const isActiveClass = (path: string, route: string) => {
-    const isActive = route === path ? styles.active : styles.inActive;
-
-    const navClassName = classNames(styles.link, isActive);
-    console.log(navClassName);
-    return navClassName;
-  };
+  const currentSelectedRoute = router.pathname;
 
   return (
     <header className={classNames(styles.header, unbound.className)}>
@@ -40,52 +33,34 @@ export default function MainHeader() {
       </div>
       <nav className={styles.navigation}>
         <ul>
-          <li>
-            <Link className={isActiveClass('/', currentRoute)} href="/">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={isActiveClass('/about', currentRoute)}
-              href="/about"
-            >
-              About
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={isActiveClass('/members', currentRoute)}
-              href="/members"
-            >
-              Membership
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={isActiveClass('/events', currentRoute)}
-              href="/events"
-            >
-              Events
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={isActiveClass('/contact', currentRoute)}
-              href="/contact"
-            >
-              Contact
-            </Link>
-          </li>
+          <NavItem link="/" currentRoute={currentSelectedRoute} name={'Home'} />
+          <NavItem
+            link="/about"
+            currentRoute={currentSelectedRoute}
+            name={'About'}
+          />
+          <NavItem
+            link="/members"
+            currentRoute={currentSelectedRoute}
+            name={'Members'}
+          />
+          <NavItem
+            link="/events"
+            currentRoute={currentSelectedRoute}
+            name={'Events'}
+          />
+          <NavItem
+            link="/contact"
+            currentRoute={currentSelectedRoute}
+            name={'Contact'}
+          />
+
           {status === 'authenticated' && (
-            <li>
-              <Link
-                className={isActiveClass('/profile', currentRoute)}
-                href="/profile"
-              >
-                Profile
-              </Link>
-            </li>
+            <NavItem
+              link="/profile"
+              currentRoute={currentSelectedRoute}
+              name="Profile"
+            />
           )}
           {(status === 'loading' || status === 'unauthenticated') && (
             <li>

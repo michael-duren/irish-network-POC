@@ -12,15 +12,15 @@
   padding: 1rem;
   width: 20rem;
   height: 20rem;
-  border: 1px solid rgb(223, 222, 222);
+  border: 1px solid var(--border-light);
   border-radius: 10px;
-  background-color: #fff;
-  box-shadow: 10px 5px 10px rgb(223, 222, 222);
+  background-color: var(--light-background);
+  box-shadow: 10px 5px 10px var(--border-light);
 }
 
 .item h2 {
   padding: 1rem;
-  border-bottom: 1px solid rgb(223, 222, 222);
+  border-bottom: 1px solid var(--border-light);
 }
 
 .red {

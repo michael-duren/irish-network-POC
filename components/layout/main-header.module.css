@@ -28,14 +28,6 @@
   font-size: 1rem;
 }
 
-.link {
-  transition: 0.5s ease-in-out;
-}
-
-.link:hover {
-  border-bottom: 1px solid black;
-}
-
 @media (max-width: 768px) {
   .logo {
     font-size: 2.5rem;
@@ -44,8 +36,4 @@
   .navigation {
     display: none;
   }
-}
-
-.active {
-  color: red;
 }
