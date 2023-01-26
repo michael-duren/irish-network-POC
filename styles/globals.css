@@ -21,6 +21,11 @@ body {
   --color-secondary-600: #131f6f;
   --color-secondary-700: #000f70;
 
+  --border-light: #DFDEDE
+  --light-background: #fff
+
+  --speed: 500ms;
+
   --size-1: 0.25rem;
   --size-2: 0.5rem;
   --size-3: 0.75rem;
