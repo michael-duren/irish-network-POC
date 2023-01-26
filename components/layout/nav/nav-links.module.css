@@ -1,0 +1,19 @@
+.navigation ul {
+  display: flex;
+}
+
+.navigation li {
+  padding: 2rem;
+  font-weight: 200;
+}
+
+.navigation a {
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .navigation {
+    display: none;
+  }
+}

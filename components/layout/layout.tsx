@@ -1,4 +1,4 @@
-import MainHeader from './main-header';
+import MainHeader from './nav/main-header';
 import styles from './layout.module.css';
 
 import type { DefaultProps } from '@/utils/types';

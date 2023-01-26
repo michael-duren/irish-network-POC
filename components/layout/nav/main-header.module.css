@@ -14,26 +14,8 @@
   color: black;
 }
 
-.navigation ul {
-  display: flex;
-}
-
-.navigation li {
-  padding: 2rem;
-  font-weight: 200;
-}
-
-.navigation a {
-  text-decoration: none;
-  font-size: 1rem;
-}
-
 @media (max-width: 768px) {
   .logo {
     font-size: 2.5rem;
-  }
-
-  .navigation {
-    display: none;
   }
 }
