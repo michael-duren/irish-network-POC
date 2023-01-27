@@ -10,6 +10,7 @@
 
 .item {
   padding: 1rem;
+  margin: 2rem;
   width: 20rem;
   height: 20rem;
   border: 1px solid var(--border-light);
@@ -30,4 +31,10 @@
 .clover {
   font-size: 8rem;
   font-weight: 100;
+}
+
+@media (max-width: 819px) {
+  .article {
+    flex-direction: column;
+  }
 }

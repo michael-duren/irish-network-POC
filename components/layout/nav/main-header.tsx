@@ -2,10 +2,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useSession } from 'next-auth/react';
+
 import { Poppins } from '@next/font/google';
 import classNames from 'classnames';
 
 import NavLinks from './nav-links';
+
 import styles from './main-header.module.css';
 
 const unbound = Poppins({
@@ -16,12 +18,12 @@ const unbound = Poppins({
 export default function MainHeader() {
   const router = useRouter();
   const currentRoute = router.pathname;
-  const { data: session, status } = useSession();
+  const { status } = useSession();
 
   return (
     <header className={classNames(styles.header, unbound.className)}>
       <div className={styles.logo}>
-        <Link href="/">
+        <Link className={styles.image} href="/">
           <Image
             src="/in-logo.svg"
             alt="Irish Network Logo"

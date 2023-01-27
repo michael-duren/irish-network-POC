@@ -12,8 +12,49 @@
   font-size: 1rem;
 }
 
-@media (max-width: 768px) {
-  .navigation {
-    display: none;
+.mobile {
+  cursor: pointer;
+  font-size: 3rem;
+}
+
+.mobileButton {
+  color: rgb(144, 142, 142);
+}
+
+.mobile {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .navigation ul {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 20vh;
+    right: 0px;
+    width: 300px;
+    background-color: var(--light-background);
+    z-index: 2;
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.2);
+    padding: 40px 0 0 10px;
+    transition: 0.3s ease-in-out;
   }
+
+  .inActive ul {
+    right: -300px;
+  }
+
+  .isActive ul {
+    right: 0;
+  }
+
+  .mobile {
+    display: block;
+  }
+}
+
+@media (min-width: 819px) {
 }
