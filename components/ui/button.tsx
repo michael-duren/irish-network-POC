@@ -33,9 +33,9 @@ export default function Button({
 
   if (linkTo) {
     return (
-      <div className={classNames(buttonStyle, styles.button)}>
+      <button className={classNames(buttonStyle, styles.button)}>
         <Link href={linkTo}>{children}</Link>
-      </div>
+      </button>
     );
   }
   return (

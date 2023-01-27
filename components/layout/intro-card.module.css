@@ -24,6 +24,10 @@
   border-bottom: 1px solid var(--border-light);
 }
 
+.item p {
+  margin-top: 1rem;
+}
+
 .red {
   color: red;
 }
