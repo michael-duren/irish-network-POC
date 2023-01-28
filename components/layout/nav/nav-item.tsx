@@ -15,7 +15,7 @@ export default function NavItem({
     const isActive = route === path ? styles.active : styles.inActive;
 
     const navClassName = classNames(styles.link, isActive);
-    console.log(navClassName);
+
     return navClassName;
   };
 

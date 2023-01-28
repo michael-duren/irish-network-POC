@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-import styles from './home.module.css';
+import styles from '../styles/home.module.css';
 import Banner from '@/components/ui/banner';
 import IntroCard from '@/components/layout/intro-card';
 

@@ -2,14 +2,14 @@ import { SessionProvider } from 'next-auth/react';
 import type { AppProps } from 'next/app';
 import type { Session } from 'next-auth';
 
-import { Inter } from '@next/font/google';
+import { Poppins } from '@next/font/google';
 import '@/styles/globals.css';
 
 import Layout from '@/components/layout/layout';
 
-const roboto = Inter({
-  // weight: ['400', '700'],
+const poppins = Poppins({
   subsets: ['latin'],
+  weight: ['200', '400'],
 });
 
 export default function App({
@@ -18,7 +18,7 @@ export default function App({
 }: AppProps<{ session: Session }>) {
   return (
     <SessionProvider session={session}>
-      <main className={roboto.className}>
+      <main className={poppins.className}>
         <Layout>
           <Component {...pageProps} />
         </Layout>

@@ -10,7 +10,7 @@ import NavLinks from './nav-links';
 
 import styles from './main-header.module.css';
 
-const unbound = Poppins({
+const poppins = Poppins({
   subsets: ['latin'],
   weight: ['200', '400'],
 });
@@ -21,7 +21,7 @@ export default function MainHeader() {
   const { status } = useSession();
 
   return (
-    <header className={classNames(styles.header, unbound.className)}>
+    <header className={classNames(styles.header, poppins.className)}>
       <div className={styles.logo}>
         <Link className={styles.image} href="/">
           <Image
