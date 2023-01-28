@@ -49,7 +49,7 @@ export default function UserProfile() {
           >
             Membership
           </li>
-          <li onClick={() => setNavStatus('perks')} className={styles.nav}>
+          <li onClick={() => setNavStatus('perks')} className={perksClass}>
             Perks
           </li>
         </ul>
