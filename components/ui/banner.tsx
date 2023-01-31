@@ -6,10 +6,18 @@ import styles from './banner.module.css';
 type BannerProps = {
   imagePath: string;
   title: string;
-  titleColor: 'white' | 'green';
+  titleColor?: 'white' | 'green';
+  height?: number;
+  width?: number;
 };
 
-export default function Banner({ imagePath, title, titleColor }: BannerProps) {
+export default function Banner({
+  imagePath,
+  title,
+  titleColor,
+  height = 3000,
+  width = 4000,
+}: BannerProps) {
   let chosenColor;
 
   switch (titleColor) {
@@ -30,13 +38,10 @@ export default function Banner({ imagePath, title, titleColor }: BannerProps) {
         className={styles.landingImage}
         src={imagePath}
         alt={`${title} background image`}
-        height={3000}
-        width={3000}
+        height={height}
+        width={width}
       />
-      <h1
-        style={{ color: `${titleColor}` }}
-        className={classNames(chosenColor, styles.landingText)}
-      >
+      <h1 style={{ color: `${titleColor}` }} className={styles.landingText}>
         {title}
       </h1>
     </div>

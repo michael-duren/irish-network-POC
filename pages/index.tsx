@@ -16,7 +16,7 @@ export default function Home() {
       <section className={styles.section}>
         <Banner
           titleColor="white"
-          imagePath="/images/stools.jpg"
+          imagePath="/images/bag-pipes.jpg"
           title="Welcome"
         />
         <IntroCard />

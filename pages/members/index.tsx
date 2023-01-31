@@ -4,8 +4,7 @@ export default function Members() {
   return (
     <>
       <Banner
-        titleColor="white"
-        imagePath="/images/stools.jpg"
+        imagePath="/images/members.jpg"
         title="Interested in becoming a member?"
       />
     </>

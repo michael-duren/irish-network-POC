@@ -4,8 +4,8 @@ export default function About() {
   return (
     <>
       <Banner
-        titleColor="white"
-        imagePath="/images/stools.jpg"
+        titleColor="green"
+        imagePath="/images/train.jpg"
         title="Meet The Team!"
       />
     </>
