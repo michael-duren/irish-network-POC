@@ -31,7 +31,7 @@ export default function AuthButton() {
           <Button
             onClickHandler={signOutHandler}
             function="click"
-            buttonType="dark"
+            buttonType="primary"
           >
             Sign Out
           </Button>

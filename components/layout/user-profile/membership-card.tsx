@@ -29,12 +29,14 @@ export default function MembershipCard({
           )}
         </div>
       </div>
-      <div className={styles.line}>
-        <p>
-          Expiration: {'  '}
-          {new Date().toLocaleDateString()}
-        </p>
-      </div>
+      {isMembershipActive && (
+        <div className={styles.line}>
+          <p>
+            Expiration: {'  '}
+            {new Date().toLocaleDateString()}
+          </p>
+        </div>
+      )}
       <div className={styles.line}>
         <Button buttonType="secondary" linkTo="/signup" function="link">
           {isMembershipActive ? 'Renew Early?' : 'Sign Up!'}
