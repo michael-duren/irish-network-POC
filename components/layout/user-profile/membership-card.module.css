@@ -1,0 +1,19 @@
+.line {
+  display: flex;
+  padding: 1rem;
+}
+
+.lineitem {
+  padding: 0 1rem;
+  width: 100%;
+}
+
+.iconActive {
+  font-size: 1.5rem;
+  color: green;
+}
+
+.iconNonActive {
+  font-size: 1.5rem;
+  color: red;
+}

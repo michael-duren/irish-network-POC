@@ -2,15 +2,16 @@ import { useState } from 'react';
 import Image from 'next/image';
 // import type { GetServerSideProps } from 'next';
 import { useSession } from 'next-auth/react';
-
-import { AiOutlineCheckCircle, AiOutlineIssuesClose } from 'react-icons/ai';
-import styles from '../../styles/profile.module.css';
 import classNames from 'classnames';
+
+import styles from '../../styles/profile.module.css';
+
+import MembershipCard from '@/components/layout/user-profile/membership-card';
 
 type NavStatus = 'membership' | 'perks';
 
 export default function UserProfile() {
-  const [isActiveMember, setIsActiveMember] = useState(true);
+  const [isActiveMember, setIsActiveMember] = useState(false);
   const [navStatus, setNavStatus] = useState<NavStatus>('membership');
   const { data: session } = useSession({ required: true });
 
@@ -55,29 +56,11 @@ export default function UserProfile() {
         </ul>
       </aside>
       <div className={styles.main}>
-        <h2>Membership Status</h2>
-        <div className={styles.line}>
-          <div>
-            {isActiveMember ? (
-              <AiOutlineCheckCircle className={styles.icon} />
-            ) : (
-              <AiOutlineIssuesClose className={styles.icon} />
-            )}
-          </div>
-          <div className={styles.lineitem}>
-            {isActiveMember ? (
-              <p>Your Membership is currently active</p>
-            ) : (
-              <p>Your Memebership is not active</p>
-            )}
-          </div>
-        </div>
-        <div className={styles.line}>
-          <p>
-            Expiration: {'  '}
-            {new Date(2024, 1).toLocaleDateString()}
-          </p>
-        </div>
+        {navStatus === 'membership' ? (
+          <MembershipCard isMembershipActive={isActiveMember} />
+        ) : (
+          <p>PERKS</p>
+        )}
       </div>
     </section>
   );

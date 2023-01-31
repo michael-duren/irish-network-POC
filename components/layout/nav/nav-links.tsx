@@ -1,12 +1,12 @@
 import { useState } from 'react';
-import { signIn, signOut } from 'next-auth/react';
+
 import classNames from 'classnames';
 
 import { GoThreeBars } from 'react-icons/go';
 import { IoMdClose } from 'react-icons/io';
 
 import NavItem from './nav-item';
-import Button from '../../ui/button';
+import AuthButton from '@/components/ui/auth-button';
 import styles from './nav-links.module.css';
 
 type NavLinksProps = {
@@ -67,24 +67,7 @@ export default function NavLinks({
             name="Profile"
           />
         )}
-        {(status === 'loading' || status === 'unauthenticated') && (
-          <li>
-            <Button
-              onClickHandler={signIn}
-              function="click"
-              buttonType="primary"
-            >
-              Log In
-            </Button>
-          </li>
-        )}
-        {status === 'authenticated' && (
-          <li>
-            <Button onClickHandler={signOut} function="click" buttonType="dark">
-              Sign Out
-            </Button>
-          </li>
-        )}
+        <AuthButton />
       </ul>
     </nav>
   );
