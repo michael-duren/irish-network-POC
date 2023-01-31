@@ -1,11 +1,10 @@
 import Image from 'next/image';
-import classNames from 'classnames';
 
 import styles from './banner.module.css';
 
 type BannerProps = {
   imagePath: string;
-  title: string;
+  title?: string;
   titleColor?: 'white' | 'green';
   height?: number;
   width?: number;
@@ -41,9 +40,11 @@ export default function Banner({
         height={height}
         width={width}
       />
-      <h1 style={{ color: `${titleColor}` }} className={styles.landingText}>
-        {title}
-      </h1>
+      {title && (
+        <h1 style={{ color: `${titleColor}` }} className={styles.landingText}>
+          {title}
+        </h1>
+      )}
     </div>
   );
 }

@@ -4,9 +4,9 @@ export default function About() {
   return (
     <>
       <Banner
-        titleColor="green"
+        titleColor="white"
         imagePath="/images/train.jpg"
-        title="Meet The Team!"
+        title="About Us"
       />
     </>
   );
