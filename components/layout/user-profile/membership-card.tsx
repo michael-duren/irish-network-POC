@@ -38,7 +38,7 @@ export default function MembershipCard({
         </div>
       )}
       <div className={styles.line}>
-        <Button buttonType="secondary" linkTo="/signup" function="link">
+        <Button buttonType="special" linkTo="/signup" function="link">
           {isMembershipActive ? 'Renew Early?' : 'Sign Up!'}
         </Button>
       </div>

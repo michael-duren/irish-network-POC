@@ -44,7 +44,7 @@
 }
 
 /* Secondary */
-.secondary {
+.special {
   /* background-color: var(--color-secondary-100); */
   background-color: white;
   border: 1px solid rgb(202, 204, 209);
@@ -55,25 +55,25 @@
   transition-duration: 1s;
   transition-timing-function: linear;
 }
-.secondary a {
+.special a {
   color: rgb(0, 0, 0);
 }
 
-.secondary:hover,
-.secondary:active {
+.special:hover,
+.special:active {
   border: solid 1px black;
 }
 
 /* Dark */
-.dark {
+.plain {
   border: solid 1px rgb(160, 163, 167);
   color: black;
 }
-.dark button {
+.plain button {
   color: white;
 }
 
-.dark:hover,
-.dark:active {
+.plain:hover,
+.plain:active {
   border-color: rgb(17 24 39);
 }

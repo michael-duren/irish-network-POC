@@ -5,7 +5,7 @@ import type { DefaultProps } from '@/utils/types';
 import styles from './button.module.css';
 
 interface ButtonProps extends DefaultProps {
-  buttonType: 'primary' | 'secondary' | 'dark';
+  buttonType: 'primary' | 'special' | 'plain';
   function: 'link' | 'click';
   linkTo?: string;
   onClickHandler?: () => void;
@@ -23,11 +23,11 @@ export default function Button({
     case 'primary':
       buttonStyle = styles.primary;
       break;
-    case 'secondary':
-      buttonStyle = styles.secondary;
+    case 'special':
+      buttonStyle = styles.special;
       break;
-    case 'dark':
-      buttonStyle = styles.dark;
+    case 'plain':
+      buttonStyle = styles.plain;
       break;
   }
 
