@@ -6,11 +6,11 @@ export default function AuthButton() {
   const { status } = useSession();
 
   const signInHandler = () => {
-    signIn('google', { callbackUrl: 'localhost:3000/profile' });
+    signIn('google', { callbackUrl: 'http://localhost:3000/profile' });
   };
 
   const signOutHandler = () => {
-    signOut({ callbackUrl: 'localhost:3000/' });
+    signOut({ callbackUrl: 'http://localhost:3000/' });
   };
 
   return (

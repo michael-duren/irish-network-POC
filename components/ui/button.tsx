@@ -33,17 +33,17 @@ export default function Button({
 
   if (linkTo) {
     return (
-      <button className={classNames(buttonStyle, styles.button)}>
+      <div className={classNames(buttonStyle, styles.button)}>
         <Link href={linkTo}>{children}</Link>
-      </button>
+      </div>
     );
   }
   return (
-    <button
+    <div
       onClick={onClickHandler}
       className={classNames(buttonStyle, styles.button)}
     >
       {children}
-    </button>
+    </div>
   );
 }
