@@ -5,3 +5,12 @@ import { ReactNode } from 'react';
 export interface DefaultProps {
   children?: ReactNode;
 }
+
+export type EventPreviewCardType = {
+  title: string;
+  date: string;
+  time: string;
+  location: string;
+  excerpt: string;
+  image: string;
+};
