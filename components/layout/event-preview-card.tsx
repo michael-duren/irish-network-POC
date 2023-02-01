@@ -1,6 +1,8 @@
 import Image from 'next/image';
+import { IoLocationOutline, IoCalendarNumberOutline } from 'react-icons/io5';
 
 import type { EventPreviewCardType } from '@/utils/types';
+import styles from './event-preview-card.module.css';
 
 type EventPreviewCardProps = {
   event: EventPreviewCardType;
@@ -10,19 +12,29 @@ export default function EventPreviewCard({
   event: { title, date, time, location, excerpt, image },
 }: EventPreviewCardProps) {
   return (
-    <div>
-      <h2>{title}</h2>
-      <div>
-        {date} @ {time}
+    <div className={styles.container}>
+      <div className={styles.info}>
+        <h2>{title}</h2>
+        <div className={styles.date}>
+          <div className={styles.dateIcon}>
+            <IoCalendarNumberOutline />
+          </div>
+          {date} @ {time}
+        </div>
+        <address className={styles.address}>
+          <IoLocationOutline />
+          {location}
+        </address>
+        <p>{excerpt}</p>
       </div>
-      <address>{location}</address>
-      <p>{excerpt}</p>
-      <Image
-        src={image}
-        height={300}
-        width={300}
-        alt={`Event Image for ${title}`}
-      />
+      <div className={styles.imageContainer}>
+        <Image
+          src={image}
+          height={300}
+          width={400}
+          alt={`Event Image for ${title}`}
+        />
+      </div>
     </div>
   );
 }

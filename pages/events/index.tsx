@@ -27,7 +27,7 @@ export default function Events() {
       location: 'Dunn Bros, 234 Grand Ave, St. Paul, MN',
       excerpt:
         'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error eaque, et dicta ratione eveniet mollitia dolor tenetur hic totam ipsa.',
-      image: '/images/event-example.jpg',
+      image: '/images/bag-pipes.jpg',
     },
     {
       title: 'Irish Fair',
