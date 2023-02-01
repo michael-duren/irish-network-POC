@@ -48,10 +48,6 @@
   padding: 1rem;
 }
 
-.imageContainer {
-  border: 1px solid black;
-}
-
 .imageContainer img {
   border-radius: 2rem;
 }

@@ -13,4 +13,5 @@ export type EventPreviewCardType = {
   location: string;
   excerpt: string;
   image: string;
+  slug: string;
 };

@@ -19,6 +19,7 @@ export default function Events() {
       excerpt:
         'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error eaque, et dicta ratione eveniet mollitia dolor tenetur hic totam ipsa.',
       image: '/images/event-example.jpg',
+      slug: 'irish-fair',
     },
     {
       title: 'Irish Day',
@@ -28,6 +29,7 @@ export default function Events() {
       excerpt:
         'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error eaque, et dicta ratione eveniet mollitia dolor tenetur hic totam ipsa.',
       image: '/images/bag-pipes.jpg',
+      slug: 'irish-day',
     },
     {
       title: 'Irish Fair',
@@ -37,6 +39,7 @@ export default function Events() {
       excerpt:
         'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error eaque, et dicta ratione eveniet mollitia dolor tenetur hic totam ipsa.',
       image: '/images/event-example.jpg',
+      slug: 'irish-fair',
     },
   ];
 
