@@ -11,7 +11,7 @@ import MembershipCard from '@/components/layout/user-profile/membership-card';
 type NavStatus = 'membership' | 'perks';
 
 export default function UserProfile() {
-  const [isActiveMember, setIsActiveMember] = useState(false);
+  const [isActiveMember, setIsActiveMember] = useState(true);
   const [navStatus, setNavStatus] = useState<NavStatus>('membership');
   const { data: session } = useSession({ required: true });
 
